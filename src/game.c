@@ -28,7 +28,7 @@ void to_lowercase(char* str) {
 }
 
 // Function to ask questions
-void ask_question(const char *question, const char *correct_answer, int *score) {
+void ask_question(const char *question, const char *correct_answer, const char *flag, int *score) {
     char user_answer[100];
     int incorrect_attempts = 0; // Track incorrect attempts
     
@@ -56,8 +56,9 @@ void ask_question(const char *question, const char *correct_answer, int *score) 
 
         // Check if the answer is correct
         if (strcmp(trimmed_user_answer, correct_answer_copy) == 0) {
-            printf("Correct!\n\n");
+            printf("\nCorrect!\n");
             (*score)++; // Increment the score for a correct answer
+            printf("The Flag is: %s \n\n", flag);
             return; // Exit the function on correct answer
         } else {
             incorrect_attempts++;
