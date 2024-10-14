@@ -4,7 +4,7 @@
 ## Game Level
 <ul><li>Level One teaches they how the Print Line works</ul></li>
 
-## C Programming Adivce
+# C Programming Adivce
 ### 1. Follow a Consistent Coding Style
 <ul><li>Indentation: Use consistent indentation (e.g., 4 spaces or a tab) to make code readable.</ul></li>
 <ul><li>Brace style: Be consistent with the placement of braces (e.g., K&R style vs. Allman style).</ul></li>
