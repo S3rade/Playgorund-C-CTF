@@ -3,11 +3,6 @@
 
 ## Game Level
 <ul><li>Level One teaches they how the Print Line works</ul></li>
-<ul><li></ul></li>
-<ul><li></ul></li>
-<ul><li></ul></li>
-<ul><li></ul></li>
-
 
 ## C Programming Adivce
 ### 1. Follow a Consistent Coding Style
