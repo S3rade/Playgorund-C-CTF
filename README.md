@@ -307,5 +307,16 @@ Conclusion
 By organizing your C project in a structured and modular way, you ensure that the code is easy to maintain, understand, and extend. Tools like Makefile or CMake help manage the complexity of building, while separating your code into logical directories improves the project's readability and manageability.
 
 # Compiling the C Programme
-The command to export the product is `gcc -o <name-of-file>.exe <all the source Files for the game>` . 
-E.g. for our case will look like the code : `gcc -o learnC.exe src/main.c src/game.c` .
+The command to export the product is:
+
+`gcc -o <name-of-file>.exe <all the source Files for the game>`.
+
+E.g. for our case will look like the code : 
+
+`gcc -o learnC.exe src/main.c src/game.c` .
+
+# Setting Up C Environment
+| Name |Purpose | Link|
+|--|--|--|
+|MinGW| Code Compiler for C Program|[Click here to Download Page](https://sourceforge.net/projects/mingw/)|
+|Guide for Installion |Youtube tutorial for setting up the compiler |[Click here to Watch](https://www.youtube.com/watch?v=KnPj8Ow3bM8) |  
