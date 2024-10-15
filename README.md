@@ -305,3 +305,7 @@ This type of structure scales better when you have many modules or different sub
 
 Conclusion
 By organizing your C project in a structured and modular way, you ensure that the code is easy to maintain, understand, and extend. Tools like Makefile or CMake help manage the complexity of building, while separating your code into logical directories improves the project's readability and manageability.
+
+# Compiling the C Programme
+The command to export the product is `gcc -o <name-of-file>.exe <all the source Files for the game>` . 
+E.g. for our case will look like the code : `gcc -o learnC.exe src/main.c src/game.c` .
