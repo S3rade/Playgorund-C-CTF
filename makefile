@@ -1,13 +1,13 @@
 CC = gcc
-CFLAGS = -Wall -g -Iinclude
-SOURCES = src/main.c src/game.c src/server.c
+CFLAGS = -Wall -g -Iinclude   # Include the directory for headers
+SOURCES = src/main.c src/game.c
 OBJECTS = $(SOURCES:.c=.o)
-TARGET = build/game.exe
+EXEC = build/game
 
-all: $(TARGET)
+all: $(EXEC)
 
-$(TARGET): $(OBJECTS)
-    $(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS)
+$(EXEC): $(OBJECTS)
+	$(CC) $(CFLAGS) -o $(EXEC) $(OBJECTS)
 
 clean:
-    del $(OBJECTS) $(TARGET)
+	rm -f $(OBJECTS) $(EXEC)
