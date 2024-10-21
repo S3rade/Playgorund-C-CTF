@@ -1,17 +1,27 @@
+// main.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <windows.h>
+#include <process.h> // For _beginthread
 #include "../include/game.h"
+#include "../include/server.h" // Include the server header
 
-// Function prototypes
-void clear_input_buffer();
-char *generate_flag(int length);
+// Thread function for running the web server
+unsigned __stdcall run_server(void *arg) {
+    start_server();
+    return 0;
+}
 
 int main() {
+    HANDLE server_thread;
+    // Start the web server in a separate thread
+    server_thread = (HANDLE)_beginthreadex(NULL, 0, run_server, NULL, 0, NULL);
+
     char choice;
     do {
-        // Define questions and answers
+         // Define questions and answers
         const char *questions[][3] = {
             {"How to print a line in C?", "printf(\"Hello, World!\");",""}, 
             {"How to declare a variable(x) in C?", "int x;",""}, 
@@ -69,6 +79,9 @@ int main() {
         choice = getchar();
         clear_input_buffer(); // Clear input buffer to handle any extra characters
 
+        // Wait for the server thread to finish before exiting
+        WaitForSingleObject(server_thread, INFINITE);
+        CloseHandle(server_thread);
     } while (choice == 'y' || choice == 'Y');
 
     printf("Thank you for playing the quiz! Goodbye.\n");
